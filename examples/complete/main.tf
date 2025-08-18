@@ -8,6 +8,7 @@ module "alb" {
   certificate_arn   = ""
   health_check_path = "/health"
   idle_timeout      = 4000
+  internal          = false
   tags = {
     Environment = "dev"
   }

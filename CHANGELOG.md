@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0]() (2025-06-23)
+
+### Changes
+
+* Update Module Source to Terraform Registry.
+* Introduce new variables `internal` and `enable_deletion_protection` to allow customization of the ALB.
+
 ## [0.5.0]() (2025-04-20)
 
 ### Breaking changes
