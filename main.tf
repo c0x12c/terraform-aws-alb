@@ -4,12 +4,12 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb
 */
 resource "aws_lb" "main" {
   name                       = "${var.name}-alb"
-  internal                   = false
+  internal                   = var.internal
   load_balancer_type         = "application"
   security_groups            = concat([aws_security_group.alb.id], var.security_groups)
   subnets                    = var.public_subnets
   idle_timeout               = var.idle_timeout
-  enable_deletion_protection = false
+  enable_deletion_protection = var.enable_deletion_protection
 
   tags = merge({
     Name = "${var.name}-alb"
